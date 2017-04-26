@@ -3,10 +3,11 @@ import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
+import { FlexLayoutModule } from '@angular/flex-layout';
+import { SharedMaterialModuleModule } from './shared/shared-material-module/shared-material-module.module';
 import 'hammerjs';
 
 import { AppComponent } from './app.component';
-import { SharedMaterialModuleModule } from './shared/shared-material-module/shared-material-module.module';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { SharedMaterialModuleModule } from './shared/shared-material-module/shar
     NoopAnimationsModule,
     FormsModule,
     HttpModule,
-    SharedMaterialModuleModule
+    SharedMaterialModuleModule,
+    FlexLayoutModule
   ],
   providers: [],
   bootstrap: [AppComponent]
