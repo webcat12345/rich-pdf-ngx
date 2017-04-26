@@ -3,7 +3,9 @@
 [![Build Status](https://travis-ci.org/webcat12345/rich-pdf-ngx.svg?branch=master)](https://travis-ci.org/webcat12345/rich-pdf-ngx)  [![Heroku](https://heroku-badge.herokuapp.com/?app=heroku-badge&style=flat)](https://webblack.herokuapp.com/)
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.1.
-UI is using [Angular Material](https://github.com/angular/material2) version 2.0.0-beta.3.
+### UI
+[Angular Material](https://github.com/angular/material2) version 2.0.0-beta.3.
+[Angular Flexlayout](https://github.com/angular/flex-layout) version 2.0.0-beta.8.
 
 ### User Flow
 
