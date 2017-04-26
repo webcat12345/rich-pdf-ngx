@@ -3,6 +3,7 @@
 [![Build Status](https://travis-ci.org/webcat12345/rich-pdf-ngx.svg?branch=master)](https://travis-ci.org/webcat12345/rich-pdf-ngx)
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.1.
+UI is using [Angular Material](https://github.com/angular/material2) version 2.0.0-beta.3.
 
 ### User Flow
 
