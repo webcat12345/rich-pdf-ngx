@@ -1,6 +1,6 @@
 # RichPdf
 
-[![Build Status](https://travis-ci.org/webcat12345/rich-pdf-ngx.svg?branch=master)](https://travis-ci.org/webcat12345/rich-pdf-ngx)
+[![Build Status](https://travis-ci.org/webcat12345/rich-pdf-ngx.svg?branch=master)](https://travis-ci.org/webcat12345/rich-pdf-ngx)  [![Heroku](https://heroku-badge.herokuapp.com/?app=heroku-badge&style=flat)](https://webblack.herokuapp.com/)
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.1.
 UI is using [Angular Material](https://github.com/angular/material2) version 2.0.0-beta.3.
@@ -25,8 +25,7 @@ UI is using [Angular Material](https://github.com/angular/material2) version 2.0
 
 ### Demo
 
-Deployed on Heroku staging server
-not yet (http://localhost:3000)
+Deployed on Heroku staging server https://rich-pdf-ngx.herokuapp.com
 
 ### Development server
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
