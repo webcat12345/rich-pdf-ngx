@@ -1,5 +1,7 @@
 # RichPdf
 
+[![Build Status](https://travis-ci.org/webcat12345/rich-pdf-ngx.svg?branch=master)](https://travis-ci.org/webcat12345/rich-pdf-ngx)
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.1.
 
 ### User Flow
