@@ -19,7 +19,7 @@ export const routes: Routes = [
     component: LoginComponent
   },{
     path: '**',
-    redirectTo: 'dashboard'
+    redirectTo: 'login'
   }
 ];
 
