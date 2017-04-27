@@ -5,6 +5,7 @@ import { SharedMaterialModuleModule } from '../shared/shared-material-module/sha
 import { LayoutComponent } from './layout.component';
 import { HeaderComponent } from './header/header.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
+import { NAV_DROPDOWN_DIRECTIVES } from '../shared/directives/nav-dropdown.directive';
 
 @NgModule({
   imports: [
@@ -12,7 +13,7 @@ import { SidebarComponent } from './sidebar/sidebar.component';
     RouterModule,
     SharedMaterialModuleModule
   ],
-  declarations: [LayoutComponent, HeaderComponent, SidebarComponent],
+  declarations: [LayoutComponent, HeaderComponent, SidebarComponent, NAV_DROPDOWN_DIRECTIVES],
   exports: [
     LayoutComponent
   ]

@@ -5,13 +5,12 @@ import { LayoutComponent } from './layout/layout.component';
 
 export const routes: Routes = [
   {
-    path: '',
-    pathMatch: 'full',
+    path: 'dashboard',
     component: LayoutComponent,
     children: [
       {
         path: '',
-        component: LoginComponent
+        loadChildren: './pages/dashboard/dashboard.module#DashboardModule'
       }
     ],
   },{
@@ -20,7 +19,7 @@ export const routes: Routes = [
     component: LoginComponent
   },{
     path: '**',
-    redirectTo: ''
+    redirectTo: 'dashboard'
   }
 ];
 

@@ -1,8 +1,7 @@
 <app-header></app-header>
-<app-sidebar></app-sidebar>
-<router-outlet></router-outlet>
-<!--<div class="mat-sidenav-container pdf-container">-->
-<!--<md-sidenav>-->
-<!--&lt;!&ndash; sidenav content &ndash;&gt;-->
-<!--</md-sidenav>-->
-<!--</div>-->
+<md-sidenav-container class="pdf-sidenav-container">
+  <app-sidebar></app-sidebar>
+  <div class="pad-main-content">
+    <router-outlet></router-outlet>
+  </div>
+</md-sidenav-container>
