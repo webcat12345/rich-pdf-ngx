@@ -1,0 +1,111 @@
+.sidebar {
+  width: 250px;
+  height: 100vh;
+  background-color: #106CC8;
+  background: linear-gradient(#185694, #106cc8);
+  background: -webkit-gradient(linear, to right to bottom, to right to top, color-stop(0, #185694), color-stop(1, #106cc8));
+  background: -webkit-linear-gradient(to bottom, #185694 0%, #106cc8 100%);
+  background: -moz-linear-gradient(to bottom, #185694 0%, #106cc8 100%);
+  background: linear-gradient(to bottom, #185694 0%, #106cc8 100%);
+  border-bottom: 1px solid #267ED5;
+  flex-shrink: 0;
+  z-index: 2;
+}
+
+.sidebar .sidebar-nav {
+  height: calc(100vh - 60px);
+  position: relative;
+  overflow-x: hidden;
+  overflow-y: auto;
+  width: 250px;
+}
+
+.sidebar ul.nav {
+  width: 250px;
+  -webkit-box-orient: vertical !important;
+  -webkit-box-direction: normal !important;
+  flex-direction: column !important;
+  display: flex;
+  padding-left: 0;
+  margin-bottom: 0;
+  font-size: 18px;
+}
+
+.sidebar ul.nav li.nav-item {
+  position: relative;
+  margin: 0;
+  transition: background .3s ease-in-out;
+  cursor: pointer;
+}
+
+.sidebar ul.nav li.nav-item a.nav-link.active {
+  color: #fff;
+  background : #267ED5;
+}
+
+.sidebar ul.nav li.nav-item a.nav-link {
+  color: #fff;
+  display: block;
+  padding: .75rem 1rem;
+  text-decoration: none;
+  background: transparent;
+  outline: none !important;
+  text-align: left;
+  font-size: 16px;
+}
+
+.sidebar ul.nav li.nav-item ul a.nav-link {
+  padding-left: 20px !important;
+}
+
+.sidebar ul.nav li.nav-item a.nav-link:hover {
+  color: #fff !important;
+  background: #337ab7 !important;
+}
+
+.sidebar ul.nav li.nav-item ul {
+  max-height: 0;
+  padding: 0;
+  margin: 0;
+  overflow-y: hidden;
+  -webkit-transition: max-height .3s ease-in-out;
+  transition: max-height .3s ease-in-out;
+}
+.sidebar ul.nav li.nav-item.nav-dropdown.open {
+  background: #0e5da1;
+}
+
+.sidebar ul.nav li.nav-item.nav-dropdown.open>ul {
+  max-height: 1000px;
+}
+
+.sidebar ul.nav li.nav-item a.nav-link.nav-dropdown-toggle:before {
+  position: absolute;
+  top: 2rem;
+  right: 1rem;
+  display: block;
+  width: .875rem;
+  height: .875rem;
+  padding: 0;
+  font-size: 1.9rem;
+  line-height: .65625rem;
+  text-align: center;
+  content: "\2039";
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.sidebar ul.nav li.nav-item.nav-dropdown.open>a.nav-link.nav-dropdown-toggle:before {
+  -webkit-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+}
+
+/** Navbar **/
+.navbar {
+  min-height: 60px;
+  border-radius: 0px;
+}
+
+ul.nav ul.nav-dropdown-items {
+  list-style: none;
+}

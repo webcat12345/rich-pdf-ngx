@@ -1,13 +1,11 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { MdButtonModule, MdCheckboxModule, MdToolbarModule, MdIconModule } from '@angular/material';
-
+import { MdButtonModule, MdCheckboxModule, MdToolbarModule, MdIconModule, MdSidenavModule } from '@angular/material';
 @NgModule({
   imports: [
-    CommonModule,
-    MdButtonModule, MdCheckboxModule
+    CommonModule
   ],
   declarations: [],
-  exports: [MdButtonModule, MdCheckboxModule, MdToolbarModule, MdIconModule]
+  exports: [MdButtonModule, MdCheckboxModule, MdToolbarModule, MdIconModule, MdSidenavModule]
 })
 export class SharedMaterialModuleModule { }
