@@ -1,19 +1,24 @@
 <md-sidenav #sidenav mode="side" opened="true" class="sidebar">
+  <div class="side-profile-section">
+    <div class="side-avatar">
+      <img src="../../../assets/svg/kids-avatar/girl-5.svg">
+    </div>
+  </div>
   <nav class="sidebar-nav">
     <ul class="nav">
       <li class="nav-item">
-        <a md-button class="nav-link" routerLinkActive="active" [routerLink]="['/dashboard']"><md-icon>dashboard</md-icon>&nbsp; Dashboard </a>
+        <a md-button class="nav-link" routerLinkActive="active" [routerLink]="['/dashboard']"><img class="sidebar-img" src="../../../assets/svg/common/speedometer.svg">&nbsp; Dashboard </a>
       </li>
       <li class="nav-item nav-dropdown" routerLinkActive="open">
-        <a md-button class="nav-link nav-dropdown-toggle" routerLinkActive="active"><md-icon>pets</md-icon>&nbsp; Pets </a>
+        <a md-button class="nav-link nav-dropdown-toggle" routerLinkActive="active"><img class="sidebar-img" src="../../../assets/svg/common/pet.svg">&nbsp; Pets </a>
         <ul class="nav-dropdown-items">
           <li class="nav-item">
-            <a md-button class="nav-link" routerLinkActive="active" [routerLink]="['broker/general']"><md-icon>favorite</md-icon>&nbsp; Love us </a>
+            <a md-button class="nav-link" routerLinkActive="active" [routerLink]="['broker/general']"><img class="sidebar-img" src="../../../assets/svg/common/heart.svg">&nbsp; Love us </a>
           </li>
         </ul>
       </li>
       <li class="nav-item nav-dropdown" routerLinkActive="open">
-        <a md-button class="nav-link" routerLinkActive="active"><md-icon>settings</md-icon>&nbsp; Settings </a>
+        <a md-button class="nav-link" routerLinkActive="active"><img class="sidebar-img" src="../../../assets/svg/common/001-cogwheel-1.svg">&nbsp; Settings </a>
       </li>
     </ul>
   </nav>

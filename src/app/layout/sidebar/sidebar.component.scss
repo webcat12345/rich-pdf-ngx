@@ -13,7 +13,7 @@
 }
 
 .sidebar .sidebar-nav {
-  height: calc(100vh - 60px);
+  //height: calc(100vh - 60px);
   position: relative;
   overflow-x: hidden;
   overflow-y: auto;
@@ -108,4 +108,18 @@
 
 ul.nav ul.nav-dropdown-items {
   list-style: none;
+}
+
+.side-profile-section {
+  padding: 40px;
+  .side-avatar {
+    border-radius: 50%;
+    overflow: hidden;
+    background: #ff9797;
+    border: 6px solid #ffffff;
+  }
+}
+.sidebar-img {
+  width: 30px;
+  margin-right: 10px;
 }
