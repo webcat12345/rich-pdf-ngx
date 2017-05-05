@@ -5,6 +5,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 //firebase libraries
+import { firebaseConfig } from '../../firebase/firebase-config';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { AngularFireAuthModule } from 'angularfire2/auth';
@@ -17,13 +18,7 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { LayoutModule } from './layout/layout.module';
 
-export const firebaseConfig = {
-  apiKey: 'AIzaSyCqzwqKtK0YOW7MJCracqXya9BxCf6TL10',
-  authDomain: 'rich-pdf-ngx.firebaseapp.com',
-  databaseURL: 'https://rich-pdf-ngx.firebaseio.com',
-  storageBucket: 'rich-pdf-ngx.appspot.com',
-  messagingSenderId: '751183709796'
-};
+import { AuthenticationService } from './core/services/authentication.service';
 
 @NgModule({
   declarations: [
@@ -43,7 +38,7 @@ export const firebaseConfig = {
     AppRoutingModule,
     LayoutModule
   ],
-  providers: [],
+  providers: [AuthenticationService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,21 +1,27 @@
 <div class="login-content">
   <md-card class="login-card">
     <md-card-header>
-      <div md-card-avatar class="example-header-image"></div>
-      <md-card-title>Shiba Inu</md-card-title>
-      <md-card-subtitle>Dog Breed</md-card-subtitle>
+      <div md-card-avatar class="login-avatar">
+        <img md-card-image src="../../assets/svg/avatar/052-man-5.svg">
+      </div>
+      <!--<md-card-title>Shiba Inu</md-card-title>-->
+      <!--<md-card-subtitle>Dog Breed</md-card-subtitle>-->
     </md-card-header>
-    <img md-card-image src="../../assets/svg/flat-svg/user.svg">
     <md-card-content>
-      <ul>
-        <li class="text" *ngFor="let item of items | async">
-          {{item.$value}}
-        </li>
-      </ul>
+      <form class="login-form">
+        <md-input-container class="login-input">
+          <input mdInput type="email" placeholder="E-Mail Address">
+        </md-input-container>
+        <md-input-container class="login-input">
+          <input mdInput type="password" placeholder="Password">
+        </md-input-container>
+      </form>
     </md-card-content>
-    <md-card-actions>
-      <button md-button>LIKE</button>
-      <button md-button>SHARE</button>
-    </md-card-actions>
+    <md-card-content class="social-login">
+      <button md-raised-button color="primary" class="icon-btn email"><img src="../../assets/svg/logo-svg/keywords.svg" width="40px">Login with E-Mail</button>
+      <button md-raised-button color="primary" class="icon-btn facebook"><img src="../../assets/svg/logo-svg/facebook.svg" width="40px"><span>Login with Facebook</span></button>
+      <button md-raised-button color="primary" class="icon-btn google"><img src="../../assets/svg/logo-svg/google-plus.svg" width="40px"><span>Login with Google +</span></button>
+      <button md-raised-button color="primary" class="icon-btn twitter"><img src="../../assets/svg/logo-svg/twitter.svg" width="40px"><span>Login with Twitter</span></button>
+    </md-card-content>
   </md-card>
 </div>

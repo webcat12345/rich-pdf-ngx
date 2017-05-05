@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { AngularFireDatabase, FirebaseListObservable } from 'angularfire2/database';
+import { AuthenticationService } from '../core/services/authentication.service';
 
 @Component({
   selector: 'app-login',
@@ -8,10 +8,11 @@ import { AngularFireDatabase, FirebaseListObservable } from 'angularfire2/databa
 })
 export class LoginComponent implements OnInit {
 
-  items: FirebaseListObservable<any[]>;
 
-  constructor(db: AngularFireDatabase) {
-    this.items = db.list('/items');
+  constructor(
+    private authService: AuthenticationService
+  ) {
+
   }
 
   ngOnInit() {
