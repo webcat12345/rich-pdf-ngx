@@ -24,12 +24,22 @@ export class AuthenticationService {
 
   signInWithEmail(email:string, password:string) {
     this.afAuth.auth.signInWithEmailAndPassword(email, password).then(res=>{
-      this.localStorageService.set('USER_INFO', JSON.stringify(res));
+      this.saveToken(res);
+    });
+  }
+
+  signInWithGooglePlus() {
+    this.afAuth.auth.signInWithPopup(new firebase.auth.GoogleAuthProvider()).then(res=>{
+      this.saveToken(res);
     });
   }
 
   signOut() {
     this.localStorageService.remove('USER_INFO');
     this.afAuth.auth.signOut().then(res=> {this.routerService.navigate(['/login'])});
+  }
+
+  saveToken(res) {
+    this.localStorageService.set('USER_INFO', JSON.stringify(res));
   }
 }
