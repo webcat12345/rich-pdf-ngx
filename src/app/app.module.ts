@@ -4,8 +4,6 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { FlexLayoutModule } from '@angular/flex-layout';
-import { InMemoryWebApiModule } from 'angular2-in-memory-web-api';
-import { InMemDataService } from './_database/database';
 import 'hammerjs';
 import { SharedMaterialModuleModule } from './shared/shared-material-module/shared-material-module.module';
 import { AppRoutingModule } from './app.routing';
@@ -26,7 +24,6 @@ import { LayoutModule } from './layout/layout.module';
     FlexLayoutModule,
     SharedMaterialModuleModule,
     HttpModule,
-    InMemoryWebApiModule.forRoot(InMemDataService),
     AppRoutingModule,
     LayoutModule
   ],
