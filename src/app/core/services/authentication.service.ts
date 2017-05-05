@@ -3,6 +3,7 @@ import { Observable } from 'rxjs/Observable';
 import { AngularFireAuth } from 'angularfire2/auth';
 import * as firebase from 'firebase/app';
 import { LocalStorageService } from 'angular-2-local-storage';
+import { Router } from '@angular/router';
 
 @Injectable()
 export class AuthenticationService {
@@ -11,7 +12,8 @@ export class AuthenticationService {
 
   constructor(
     private afAuth: AngularFireAuth,
-    private localStorageService: LocalStorageService
+    private localStorageService: LocalStorageService,
+    private routerService: Router
   ) {
     this.user = afAuth.authState;
   }
@@ -28,6 +30,6 @@ export class AuthenticationService {
 
   signOut() {
     this.localStorageService.remove('USER_INFO');
-    this.afAuth.auth.signOut();
+    this.afAuth.auth.signOut().then(res=> {this.routerService.navigate(['/login'])});
   }
 }

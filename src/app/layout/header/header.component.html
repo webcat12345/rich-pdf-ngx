@@ -3,4 +3,12 @@
   Rich PDF Interface
   <span class="app-toolbar-filler"></span>
   <button md-button><md-icon>home</md-icon> Back to Home</button>
+
+  <button md-icon-button class="avatar" [mdMenuTriggerFor]="menu">
+    <img src="../../../assets/svg/kids-avatar/girl-22.svg">
+  </button>
+  <md-menu #menu="mdMenu">
+    <button md-menu-item><img src="../../../assets/svg/common/application.svg" class="menu-image" width="30px"><span>Profile</span></button>
+    <button md-menu-item (click)="signOut()"><img src="../../../assets/svg/common/exit.svg" class="menu-image" width="30px"><span>SignOut</span></button>
+  </md-menu>
 </md-toolbar>
