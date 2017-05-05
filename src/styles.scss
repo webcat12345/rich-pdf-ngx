@@ -19,3 +19,10 @@ body {
 app-root {
   overflow: hidden;
 }
+.mat-input-placeholder-wrapper, input {
+  font-family: 'Dosis', sans-serif;
+  font-size: 18px;
+}
+button {
+  font-family: 'Baloo', cursive !important;
+}

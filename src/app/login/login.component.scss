@@ -1,0 +1,63 @@
+.login-content {
+  background: #000046;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to top, #1CB5E0, #000046);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to top, #1CB5E0, #000046); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  text-align: center;
+  .login-card {
+    width: 400px;
+    position: absolute;
+    transform: translateX(-50%)translateY(-50%);
+    left: 50%;
+    top: 40%;
+    .login-avatar {
+      margin: -80px auto;
+    }
+    .login-form {
+      .login-input {
+        width: 100%;
+        margin-top: 30px;
+      }
+    }
+    .btn-login {
+      font-size: 20px;
+    }
+    .social-login {
+      button {
+        width: 100%;
+        font-size: 20px;
+      }
+      .icon-btn {
+        margin-top: 5px;
+        padding: 6px;
+        img {
+          border: 2px solid white;
+          -webkit-border-radius: 50%;
+          -moz-border-radius: 50%;
+          border-radius: 50%;
+          float: left;
+        }
+        span {
+          line-height: 40px;
+          margin-top: 2px;
+        }
+      }
+      .email {
+        background-color: #324a5e;
+      }
+      .facebook {
+        background-color: #3b5998;
+      }
+      .google {
+        background-color: #ea4335;
+      }
+      .twitter {
+        background-color: #26a6d1;
+      }
+    }
+  }
+}
