@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { AuthenticationGuard } from './core/guards/authentication.guard';
 import { LoginComponent } from './login/login.component';
 import { LayoutComponent } from './layout/layout.component';
 
@@ -13,6 +14,7 @@ export const routes: Routes = [
         loadChildren: './pages/dashboard/dashboard.module#DashboardModule'
       }
     ],
+    canActivate: [AuthenticationGuard]
   },{
     path: 'login',
     pathMatch: 'full',
