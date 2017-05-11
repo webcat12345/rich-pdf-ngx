@@ -18,8 +18,9 @@ addons:
 
 script:
   - npm install
-  - ng test --cc --single-run
-  - bash <(curl -s https://codecov.io/bash)
+  - ng test --single-run
+#  - ng test --cc --single-run
+#  - bash <(curl -s https://codecov.io/bash)
 
 notifications:
   email: true
