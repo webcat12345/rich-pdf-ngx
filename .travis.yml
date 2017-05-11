@@ -19,6 +19,7 @@ addons:
 script:
   - npm install
   - ng test --code-coverage --single-run
+  - codecov -f coverage/*.json
 
 notifications:
   email: true
