@@ -4,18 +4,18 @@ import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
-//firebase libraries
+// firebase libraries
 import { firebaseConfig } from '../../firebase/firebase-config';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { AngularFireAuthModule } from 'angularfire2/auth';
-//flexlayout and angular material
+// flexlayout and angular material
 import { FlexLayoutModule } from '@angular/flex-layout';
 import 'hammerjs';
 import { SharedMaterialModuleModule } from './shared/shared-material-module/shared-material-module.module';
-//others
+// others
 import { LocalStorageModule } from 'angular-2-local-storage';
-//user defined
+// user defined
 import { AppRoutingModule } from './app.routing';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';

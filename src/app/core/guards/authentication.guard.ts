@@ -9,7 +9,7 @@ export class AuthenticationGuard implements CanActivate {
   constructor(
     private localStorageService: LocalStorageService,
     private routerService: Router
-  ){}
+  ) {}
 
   canActivate(
     next: ActivatedRouteSnapshot,
