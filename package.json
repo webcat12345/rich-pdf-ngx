@@ -29,6 +29,7 @@
     "angular-2-local-storage": "^1.0.1",
     "angularfire2": "^4.0.0-rc.0",
     "bootstrap": "^3.3.7",
+    "codecov": "^2.2.0",
     "core-js": "^2.4.1",
     "express": "^4.15.2",
     "firebase": "^3.9.0",
