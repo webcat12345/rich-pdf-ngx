@@ -18,8 +18,7 @@ addons:
 
 script:
   - npm install
-  - ng test --code-coverage true --single-run
-  - codecov -f coverage/*.json
+  - ng test --code-coverage --reporters=coverage-istanbul
 
 notifications:
   email: true
