@@ -18,8 +18,7 @@ addons:
 
 script:
   - npm install
-  - ng test --code-coverage
-  - ng build --prod --aot
+  - ng test --code-coverage --single-run
 
 notifications:
   email: true
