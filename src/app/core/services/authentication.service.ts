@@ -18,25 +18,25 @@ export class AuthenticationService {
     this.user = afAuth.authState;
   }
 
-  getAuthenticationState():Observable<firebase.User> {
+  getAuthenticationState(): Observable<firebase.User> {
     return this.user;
   }
 
-  signInWithEmail(email:string, password:string) {
-    this.afAuth.auth.signInWithEmailAndPassword(email, password).then(res=>{
+  signInWithEmail(email: string, password: string) {
+    this.afAuth.auth.signInWithEmailAndPassword(email, password).then(res => {
       this.saveToken(res);
     });
   }
 
   signInWithGooglePlus() {
-    this.afAuth.auth.signInWithPopup(new firebase.auth.GoogleAuthProvider()).then(res=>{
+    this.afAuth.auth.signInWithPopup(new firebase.auth.GoogleAuthProvider()).then(res => {
       this.saveToken(res);
     });
   }
 
   signOut() {
     this.localStorageService.remove('USER_INFO');
-    this.afAuth.auth.signOut().then(res=> {this.routerService.navigate(['/login'])});
+    this.afAuth.auth.signOut().then(res => {this.routerService.navigate(['/login'])});
   }
 
   saveToken(res) {
