@@ -9,6 +9,7 @@ module.exports = function (config) {
       require('karma-jasmine'),
       require('karma-chrome-launcher'),
       require('karma-jasmine-html-reporter'),
+      require('karma-istanbul-threshold'),
       require('karma-coverage-istanbul-reporter'),
       require('@angular/cli/plugins/karma')
     ],
@@ -25,14 +26,32 @@ module.exports = function (config) {
       'text/x-typescript': ['ts','tsx']
     },
     coverageIstanbulReporter: {
-      reports: [ 'html', 'lcovonly' ],
+      reports: [ 'html', 'lcovonly', 'json' ],
       fixWebpackSourcePaths: true
     },
     angularCli: {
       environment: 'dev'
     },
+    istanbulThresholdReporter: {
+      src: 'coverage/coverage-final.json',
+      reporters: ['text'],
+      thresholds: {
+        global: {
+          statements: 90,
+          branches: 90,
+          lines: 70,
+          functions: 90
+        },
+        each: {
+          statements: 80,
+          branches: 80,
+          lines: 60,
+          functions: 80
+        }
+      }
+    },
     reporters: config.angularCli && config.angularCli.codeCoverage
-              ? ['progress', 'coverage-istanbul']
+              ? ['progress', 'coverage-istanbul', 'istanbul-threshold']
               : ['progress', 'kjhtml'],
     port: 9876,
     colors: true,
