@@ -12,14 +12,17 @@ import { SweetAlertService } from 'ng2-sweetalert2';
 })
 export class LoginComponent implements OnInit {
 
-  user:UserInfo = new UserInfo('test@email.com', 'password');
+  user: UserInfo = new UserInfo('test@email.com', 'password');
 
   constructor(
     private authService: AuthenticationService,
     private routerService: Router,
     private swaService: SweetAlertService
   ) {
-    this.authService.getAuthenticationState().subscribe(res=> {if (res) this.routerService.navigate(['/dashboard'])});
+    this.authService.getAuthenticationState().subscribe(res => {
+      if (res) {
+        this.routerService.navigate(['/dashboard'])
+      }});
   }
 
   ngOnInit() {

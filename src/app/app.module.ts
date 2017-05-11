@@ -35,10 +35,10 @@ import { AuthenticationGuard } from './core/guards/authentication.guard';
     CommonModule,
     FormsModule,
     HttpModule,
-    AngularFireModule.initializeApp(firebaseConfig, 'rich-pdf'), AngularFireAuthModule, AngularFireDatabaseModule,  //firebase setting
+    AngularFireModule.initializeApp(firebaseConfig, 'rich-pdf'), AngularFireAuthModule, AngularFireDatabaseModule,  // firebase setting
     FlexLayoutModule,
-    SharedMaterialModuleModule, //angular material modules
-    LocalStorageModule.withConfig({prefix: '_', storageType: 'localStorage'}), //localstorage setting
+    SharedMaterialModuleModule, // angular material modules
+    LocalStorageModule.withConfig({prefix: '_', storageType: 'localStorage'}), // localstorage setting
     AppRoutingModule,
     LayoutModule
   ],
