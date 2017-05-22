@@ -44,4 +44,15 @@ export class UserService {
     this.db.object(`/users/${receiver_uid}/follower/requests/${sender_uid}`).set(request);
     this.db.object(`/users/${sender_uid}/following/requests/${receiver_uid}`).set(request);
   }
+
+  getReceivedRequest(uid: string) {
+    return this.db.list(`/users/${uid}/follower/requests`);
+  }
+
+  acceptFriendRequest(uid, sender_uid, request) {
+    this.db.object(`/users/${uid}/follower/followers/${sender_uid}`).set(request);
+    this.db.object(`/users/${sender_uid}/following/followings/${uid}`).set(request);
+    this.db.object(`/users/${uid}/follower/requests/${sender_uid}`).remove();
+    this.db.object(`/users/${sender_uid}/following/requests/${uid}`).remove();
+  }
 }

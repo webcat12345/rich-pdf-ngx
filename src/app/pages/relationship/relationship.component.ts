@@ -62,6 +62,9 @@ export class RelationshipComponent implements OnInit, OnDestroy {
         user = item;
         if (user['$key'] !== this.account.uid) {
           user['relation'] = this.isRequestedUser(user['$key']) ? 'pending' : 'unknown';
+          if (this.isMyFriend(user['$key'])) {
+            user['relation'] = 'following'
+          }
           this.users.push(user);
           this.isLoading = false;
         }
@@ -72,12 +75,14 @@ export class RelationshipComponent implements OnInit, OnDestroy {
   ngOnDestroy() {
     this.reg_userSubscription.unsubscribe();
     this.auth_subscription.unsubscribe();
+    this.profile_subscription.unsubscribe();
   }
 
   followUser(user: Profile): void {
     if (this.account.uid && user['$key']) {
       this.isLoading = true;
       const request = new Request();
+      request.senderUsername = this.profile.userName;
       this.userService.sendFriendRequest(this.account.uid, user['$key'],  request);
     }
   }
@@ -88,6 +93,22 @@ export class RelationshipComponent implements OnInit, OnDestroy {
       if (this.profile['following']) {
         if (this.profile['following']['requests']) {
           Object.keys(this.profile['following']['requests']).forEach(uid => {
+            if (user_uid === uid) {
+              flag = true;
+            }
+          });
+        }
+      }
+    }
+    return flag;
+  }
+
+  private isMyFriend(user_uid): boolean {
+    let flag = false;
+    if (this.profile) {
+      if (this.profile['following']) {
+        if (this.profile['following']['followings']) {
+          Object.keys(this.profile['following']['followings']).forEach(uid => {
             if (user_uid === uid) {
               flag = true;
             }

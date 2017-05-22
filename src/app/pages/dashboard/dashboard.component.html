@@ -1,7 +1,18 @@
 <div class="row">
-  <div class="col-lg-3 col-md-6 col-sm-6">
-    <div>
-
-    </div>
-  </div>
+  <md-card class="col-md-6">
+    <md-card-header>
+      <h1>Requests you received</h1>
+    </md-card-header>
+    <md-card-content>
+      <div class="spinner-backdrop" *ngIf="isLoading"><md-spinner></md-spinner></div>
+      <div class="row request-box" *ngFor="let request of requests;let i = index">
+        <div class="avatar">
+          <img [src]="'../../../assets/svg/avatar/052-man-' + (i+1) + '.svg'" width="50px">
+        </div>
+        <span class="username">{{request.senderUsername + ' sent you friend request.'}}</span>
+        <button md-raised-button color="primary" class="accept-btn" (click)="acceptRequest(request)">Accept</button>
+      </div>
+      <span *ngIf="requests.length == 0">You don't have any pending request.</span>
+    </md-card-content>
+  </md-card>
 </div>
