@@ -1,0 +1,36 @@
+<div class="row">
+  <md-card class="col-md-8 profile-edit-block">
+    <div class="spinner-backdrop" *ngIf="isLoading"><md-spinner></md-spinner></div>
+    <md-card-header>
+      <h1>Edit Profile</h1>
+    </md-card-header>
+    <md-card-content>
+      <form>
+        <md-input-container class="col-md-5">
+          <input mdInput placeholder="First Name" [(ngModel)]="profile.firstName" [ngModelOptions]="{standalone:true}">
+        </md-input-container>
+        <div class="col-md-1"></div>
+        <md-input-container class="col-md-5">
+          <input mdInput placeholder="Last Name" [(ngModel)]="profile.lastName" [ngModelOptions]="{standalone:true}">
+        </md-input-container>
+        <md-input-container class="col-md-5">
+          <input mdInput placeholder="User Name" [(ngModel)]="profile.userName" [ngModelOptions]="{standalone:true}">
+        </md-input-container>
+        <div class="col-md-1"></div>
+        <md-input-container class="col-md-5">
+          <input mdInput placeholder="Nick Name" [(ngModel)]="profile.nickName" [ngModelOptions]="{standalone:true}">
+        </md-input-container>
+        <md-input-container class="col-md-11">
+          <input mdInput placeholder="Address" [(ngModel)]="profile.address" [ngModelOptions]="{standalone:true}">
+        </md-input-container>
+        <md-input-container class="col-md-11">
+          <textarea mdInput placeholder="Bio" [(ngModel)]="profile.bio" [ngModelOptions]="{standalone:true}"></textarea>
+        </md-input-container>
+      </form>
+    </md-card-content>
+    <md-card-actions class="text-center">
+      <button md-raised-button color="primary" (click)="saveProfile()">Save</button>
+      <button md-raised-button class="btn-warning">Clear</button>
+    </md-card-actions>
+  </md-card>
+</div>

@@ -6,12 +6,15 @@ import { LayoutComponent } from './layout/layout.component';
 
 export const routes: Routes = [
   {
-    path: 'dashboard',
+    path: '',
     component: LayoutComponent,
     children: [
       {
-        path: '',
+        path: 'dashboard',
         loadChildren: './pages/dashboard/dashboard.module#DashboardModule'
+      }, {
+        path: 'profile',
+        loadChildren: './pages/profile/profile.module#ProfileModule'
       }
     ],
     canActivate: [AuthenticationGuard]

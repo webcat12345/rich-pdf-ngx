@@ -14,6 +14,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import 'hammerjs';
 import { SharedMaterialModuleModule } from './shared/shared-material-module/shared-material-module.module';
 // others
+import { SweetAlertService } from 'ng2-sweetalert2';
 import { LocalStorageModule } from 'angular-2-local-storage';
 // user defined
 import { AppRoutingModule } from './app.routing';
@@ -42,7 +43,7 @@ import { AuthenticationGuard } from './core/guards/authentication.guard';
     AppRoutingModule,
     LayoutModule
   ],
-  providers: [AuthenticationService, AuthenticationGuard],
+  providers: [AuthenticationService, AuthenticationGuard, SweetAlertService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
