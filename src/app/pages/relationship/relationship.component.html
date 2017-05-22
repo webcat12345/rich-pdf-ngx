@@ -15,7 +15,7 @@
           <div class="user-box">
             <button md-mini-fab class="follow-btn" (click)="followUser(user)" *ngIf="user['relation']==='unknown'">Follow</button>
             <button md-mini-fab class="pending-btn" *ngIf="user['relation']==='pending'">Waiting</button>
-            <button md-mini-fab class="following-btn" *ngIf="user['relation']==='following'">Unfollow</button>
+            <button md-mini-fab class="following-btn" *ngIf="user['relation']==='following'" (click)="unfollowUser(user)">Unfollow</button>
             <div class="avatar">
               <img [src]="'../../../assets/svg/avatar/052-man-' + (i+1) + '.svg'" width="50px">
             </div>

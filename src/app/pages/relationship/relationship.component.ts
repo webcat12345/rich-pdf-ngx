@@ -87,6 +87,13 @@ export class RelationshipComponent implements OnInit, OnDestroy {
     }
   }
 
+  unfollowUser(user: Profile): void {
+    if (this.account.uid && user['$key']) {
+      this.isLoading = true;
+      this.userService.unfollowUser(this.account.uid, user['$key']);
+    }
+  }
+
   private isRequestedUser(user_uid): boolean {
     let flag = false;
     if (this.profile) {

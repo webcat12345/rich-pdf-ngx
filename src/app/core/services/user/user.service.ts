@@ -55,4 +55,9 @@ export class UserService {
     this.db.object(`/users/${uid}/follower/requests/${sender_uid}`).remove();
     this.db.object(`/users/${sender_uid}/following/requests/${uid}`).remove();
   }
+
+  unfollowUser(uid, other_uid) {
+    this.db.object(`/users/${uid}/following/followings/${other_uid}`).remove();
+    this.db.object(`/users/${other_uid}/follower/followers/${uid}`).remove();
+  }
 }
