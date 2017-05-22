@@ -6,7 +6,6 @@ import { SweetAlertService } from 'ng2-sweetalert2';
 import { UserService } from '../../core/services';
 import { Profile, Account } from '../../core/models'
 
-
 @Component({
   selector: 'app-profile',
   templateUrl: './profile.component.html',

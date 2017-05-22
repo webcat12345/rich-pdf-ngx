@@ -3,17 +3,17 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { MaterialModule } from '@angular/material';
 
-import { ProfileRoutingModule } from './profile.routing';
+import { RelationshipRoutingModule } from './relationship.routing';
 
-import { ProfileComponent } from './profile.component';
+import { RelationshipComponent } from './relationship.component';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     MaterialModule,
-    ProfileRoutingModule
+    RelationshipRoutingModule
   ],
-  declarations: [ProfileComponent]
+  declarations: [RelationshipComponent]
 })
-export class ProfileModule { }
+export class RelationshipModule { }

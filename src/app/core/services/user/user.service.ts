@@ -24,10 +24,6 @@ export class UserService {
     return this.user;
   }
 
-  getAllDB(): FirebaseListObservable<any[]> {
-    return this.userListRef;
-  }
-
   saveUserProfile(uid: string, profile) {
     return this.db.object(`/users/${uid}`).set(profile);
   }
@@ -38,5 +34,14 @@ export class UserService {
 
   getUserProfile(uid: string) {
     return this.db.object(`/users/${uid}`);
+  }
+
+  getRegisteredUsers() {
+    return this.db.list(`/users/`)
+  }
+
+  sendFriendRequest(sender_uid: string, receiver_uid: string, request) {
+    this.db.object(`/users/${receiver_uid}/follower/requests/${sender_uid}`).set(request);
+    this.db.object(`/users/${sender_uid}/following/requests/${receiver_uid}`).set(request);
   }
 }

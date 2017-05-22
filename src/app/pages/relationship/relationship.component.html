@@ -1,0 +1,29 @@
+<div class="row">
+  <md-card class="col-md-12">
+    <md-card-header>
+      <h1>Search your favorite users</h1>
+    </md-card-header>
+    <md-card-subtitle class="row">
+      <md-input-container class="col-md-6">
+        <input mdInput placeholder="Sort by username ..." [(ngModel)]="searchKeyword" [ngModelOptions]="{standalone:true}">
+      </md-input-container>
+    </md-card-subtitle>
+    <md-card-content>
+      <div class="spinner-backdrop" *ngIf="isLoading"><md-spinner></md-spinner></div>
+      <div class="row">
+        <div class="col-md-3" *ngFor="let user of users;let i = index;">
+          <div class="user-box">
+            <button md-mini-fab class="follow-btn" (click)="followUser(user)" *ngIf="user['relation']==='unknown'">Follow</button>
+            <button md-mini-fab class="pending-btn" *ngIf="user['relation']==='pending'">Waiting</button>
+            <button md-mini-fab class="following-btn" *ngIf="user['relation']==='following'">Unfollow</button>
+            <div class="avatar">
+              <img [src]="'../../../assets/svg/avatar/052-man-' + (i+1) + '.svg'" width="50px">
+            </div>
+            <span class="username">{{user.userName}}</span>
+            <p class="detail">{{user.firstName + ' ' + user.lastName}}</p>
+          </div>
+        </div>
+      </div>
+    </md-card-content>
+  </md-card>
+</div>

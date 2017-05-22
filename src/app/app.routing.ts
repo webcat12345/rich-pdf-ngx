@@ -15,6 +15,9 @@ export const routes: Routes = [
       }, {
         path: 'profile',
         loadChildren: './pages/profile/profile.module#ProfileModule'
+      }, {
+        path: 'relationship',
+        loadChildren: './pages/relationship/relationship.module#RelationshipModule'
       }
     ],
     canActivate: [AuthenticationGuard]

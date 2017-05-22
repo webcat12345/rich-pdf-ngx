@@ -10,15 +10,15 @@
         <a md-button class="nav-link" routerLinkActive="active" [routerLink]="['/dashboard']"><img class="sidebar-img" src="../../../assets/svg/common/speedometer.svg">&nbsp; Dashboard </a>
       </li>
       <li appNavDropdown class="nav-item nav-dropdown" routerLinkActive="open">
-        <a md-button appNavDropdownToggle class="nav-link nav-dropdown-toggle" routerLinkActive="active"><img class="sidebar-img" src="../../../assets/svg/common/pet.svg">&nbsp; Pets </a>
+        <a md-button appNavDropdownToggle class="nav-link nav-dropdown-toggle" routerLinkActive="active"><img class="sidebar-img" src="../../../assets/svg/common/pet.svg">&nbsp; Relationship </a>
         <ul class="nav-dropdown-items">
           <li class="nav-item">
-            <a md-button class="nav-link" routerLinkActive="active" [routerLink]="['broker/general']"><img class="sidebar-img" src="../../../assets/svg/common/heart.svg">&nbsp; Love us </a>
+            <a md-button class="nav-link" routerLinkActive="active" [routerLink]="['/relationship/friends']"><img class="sidebar-img" src="../../../assets/svg/common/heart.svg">&nbsp; Friends </a>
           </li>
         </ul>
       </li>
       <li appNavDropdown class="nav-item nav-dropdown" routerLinkActive="open">
-        <a md-button class="nav-link" routerLinkActive="active"><img class="sidebar-img" src="../../../assets/svg/common/001-cogwheel-1.svg">&nbsp; Settings </a>
+        <a md-button class="nav-link" routerLinkActive="active" [routerLink]="['/profile']"><img class="sidebar-img" src="../../../assets/svg/common/001-cogwheel-1.svg">&nbsp; Profile </a>
       </li>
     </ul>
   </nav>

@@ -24,6 +24,7 @@ import { LayoutModule } from './layout/layout.module';
 
 import { AuthenticationService } from './core/services/authentication.service';
 import { AuthenticationGuard } from './core/guards/authentication.guard';
+import { UserService } from './core/services';
 
 @NgModule({
   declarations: [
@@ -43,7 +44,7 @@ import { AuthenticationGuard } from './core/guards/authentication.guard';
     AppRoutingModule,
     LayoutModule
   ],
-  providers: [AuthenticationService, AuthenticationGuard, SweetAlertService],
+  providers: [AuthenticationService, AuthenticationGuard, SweetAlertService, UserService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
