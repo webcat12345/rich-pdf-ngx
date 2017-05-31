@@ -29,6 +29,14 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 Deployed on Heroku staging server https://rich-pdf-ngx.herokuapp.com
 
+#### Test Users
+
+yoon@email.com      password
+test@email.com      password
+dummy@email.com     password
+
+Google+ Login available.
+
 ### Development server
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
