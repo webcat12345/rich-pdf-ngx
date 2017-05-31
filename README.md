@@ -31,9 +31,9 @@ Deployed on Heroku staging server https://rich-pdf-ngx.herokuapp.com
 
 #### Test Users
 
-yoon@email.com      password
+yoon@email.com      123456
 test@email.com      password
-dummy@email.com     password
+dummy@email.com     123456
 
 Google+ Login available.
 
